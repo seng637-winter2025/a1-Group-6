@@ -2,12 +2,12 @@
 
 **Lab. Report \#1 – Introduction to Testing and Defect Tracking**
 
-| Group: Group Number      |
+| Group: 6      |
 |-----------------|
-| Student 1 name                |   
-| Student 2 name              |   
-| Student 3 name               |   
-| Student 4 name                |   
+| Student 1 Daniel                |   
+| Student 2 Laxmi             |   
+| Student 3 Orelana              |   
+| Student 4 Vitalis                |   
 
 
 **Table of Contents**
