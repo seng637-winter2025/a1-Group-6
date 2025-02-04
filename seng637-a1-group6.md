@@ -31,13 +31,23 @@
 
 # Introduction
 
-In this lab we explored the fundamentals of software with a focus on exploratory, manual and regression. The Software Under Test (SUT) is an ATM simulation system. This lab report outlines the test plan followed, tests performed, test types and some discussions and bug report.
+In this lab we explored the fundamentals of software with a focus on exploratory, manual and regression. The Software Under Test (SUT) is an ATM simulation system.  This lab report outlines the test plan followed, tests performed, test types and some discussions and bug report.
 
 Before this lab, exploratory testing was understood as using the application to understand its functionalities and testing various scenarios without predefined test cases. Manual functional testing was identified as the process where testers manually execute and directly test different functionalities in a software application to verify their proper operation. 
 
 
 # High-level description of the exploratory testing plan
 
+### Types of Tests
+
+Three types of testing was used to test the SUT, they include:
+
+ - Exploratory testing
+ - Manual Function testing
+ - Regression testing
+
+
+### Testing Scope
 Our exploratory test plan involved identifying key functional areas of the SUT, potential errors/issues, usability concerns, and performance bottlenecks. Focus was on uncovering unexpected behaviors through dynamic exploration. 
 
 Core Functionalities tested included :  
@@ -61,7 +71,8 @@ Core Functionalities tested included :
  - Receipt  
 
  - Error Handling 
- 
+
+
 
 ### Approach: 
 
@@ -76,6 +87,9 @@ Core Functionalities tested included :
 **Exceptional Paths**: Invalid PIN entries, insufficient funds, canceled transactions. 
 
 **Boundary Testing**: Max/min withdrawal limits, rapid transaction sequences. 
+
+### Test Logistics
+
 
 ### Key Metrics: 
 
