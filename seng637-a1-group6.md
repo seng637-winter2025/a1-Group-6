@@ -36,7 +36,7 @@ In this lab we explored the fundamentals of software with a focus on exploratory
 Before this lab, exploratory testing was understood as using the application to understand its functionalities and testing various scenarios without predefined test cases. Manual functional testing was identified as the process where testers manually execute and directly test different functionalities in a software application to verify their proper operation. 
 
 
-# High-level description of the exploratory testing plan
+# High-level description of testing plan
 
 ### Types of Tests
 
@@ -74,7 +74,7 @@ Our exploratory test plan involved identifying key functional areas of the SUT, 
 
 #### Manual Testing
 The manual testing phase was scripted and followed a structured approach using the test script provided in Appendix C. This ensured consistency in test execution across different functionalities, allowing for systematic verification of the system’s behavior. The test cases covered both normal operations and edge cases, focusing on critical aspects such as invalid card entries, incorrect PIN attempts, and exceeding withdrawal limits.
-#### Regression Testing**
+#### Regression Testing
 After initial testing and bug fixes, regression testing was conducted on SUT V.1.1 to ensure that resolving existing defects did not introduce new issues into the system. This involved re-executing previously tested functionalities to verify stability and confirm that all features continued to operate as expected. A key aspect of this phase was rechecking the bugs documented during both exploratory testing and scripted manual testing, ensuring that they had been successfully addressed.
 ### Approach: 
 
