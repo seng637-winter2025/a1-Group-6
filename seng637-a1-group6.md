@@ -50,7 +50,7 @@ Three types of testing was used to test the SUT, they include:
 ### Testing Scope
 Our exploratory test plan involved identifying key functional areas of the SUT, potential errors/issues, usability concerns, and performance bottlenecks. Focus was on uncovering unexpected behaviors through dynamic exploration. 
 
-Core Functionalities tested included :  
+**Core Functionalities tested included** :  
 
  - ATM System Power On/Of 
  
@@ -72,9 +72,9 @@ Core Functionalities tested included :
 
  - Error Handling 
 
-**Manual Testing**
+#### Manual Testing
 The manual testing phase was scripted and followed a structured approach using the test script provided in Appendix C. This ensured consistency in test execution across different functionalities, allowing for systematic verification of the system’s behavior. The test cases covered both normal operations and edge cases, focusing on critical aspects such as invalid card entries, incorrect PIN attempts, and exceeding withdrawal limits.
-**Regression Testing**
+#### Regression Testing**
 After initial testing and bug fixes, regression testing was conducted on SUT V.1.1 to ensure that resolving existing defects did not introduce new issues into the system. This involved re-executing previously tested functionalities to verify stability and confirm that all features continued to operate as expected. A key aspect of this phase was rechecking the bugs documented during both exploratory testing and scripted manual testing, ensuring that they had been successfully addressed.
 ### Approach: 
 
@@ -90,13 +90,13 @@ After initial testing and bug fixes, regression testing was conducted on SUT V.1
 **Boundary Testing**: Examined extreme conditions such as maximum and minimum withdrawal limits, rapid successive transactions, and account balance edge cases to identify potential vulnerabilities or performance issues.
 
 ### Test Logistics
-**Exploratory Testing Phase**
+#### Exploratory Testing Phase
 To gain familiarity with the ATM simulation system, each team member individually followed steps 1–12 from the "Familiarization with the ATM System" subsection in the Instructions section. This phase allowed us to understand the overall functionality of the system before conducting structured testing.
-**Bug Documentation**
+#### Bug Documentation
 During exploratory testing, each team member documented any bugs they encountered while interacting with the system’s core functionalities. This process not only helped us identify defects early but also allowed us to familiarize ourselves with our chosen bug-tracking tool, Jira. Documenting these findings ensured that all identified issues were systematically tracked and later verified during regression testing.
-**Manual Functional Testing**
+#### Manual Functional Testing
 For the manual functional testing phase, two team members were assigned 20 test cases each from the test suite provided in Appendix C to drive the testing. Meanwhile, the remaining two team members tracked the execution process and documented any additional bugs found that were not identified during exploratory testing. The tests were executed sequentially from test case 1 through test case 40, ensuring comprehensive coverage of the ATM system’s core operations.
-**Regression Testing**
+#### Regression Testing
 In the final phase, each team member tested version 1.1 of the SUT, reviewing and updating the existing bug reports. The manual functional tests were repeated, with one team member executing test cases 1–20, while another executed test cases 21–40. Any newly discovered bugs were documented and reported by the team member who identified them. This ensured that all previous defects were verified, while also checking for any unintended regressions introduced by system updates.
  
 
@@ -126,7 +126,6 @@ During peer reviews, attention was given to:
  - Reproducibility: Confirming that the reported defects could be replicated, with clear steps provided.
  - Severity and priority: Evaluating the impact of the defect and prioritizing it accordingly.
 
-
 **Peer Review Process**:
 
  - Each pair created defect reports based on their testing sessions.
@@ -137,7 +136,7 @@ During peer reviews, attention was given to:
 
 
 # How the pair testing was managed and team work/effort was divided 
-Pair testing was organized by assigning roles of "driver" and "observer" within each pair. The driver conducted the tests, while the observer documented findings and provided real-time feedback. We rotated roles to ensure balanced participation and knowledge sharing. Regular communication and coordination using Microsoft Team chats/meetings helped to ensure smooth collaboration and effective pair testing. 
+Pair testing was organized by assigning roles of "driver" and "observer" within each pair. The driver conducted the tests, while the observer documented findings and provided real-time feedback. We rotated roles to ensure balanced participation and knowledge sharing. Regular communication and coordination using Microsoft Team chats/meetings helped to ensure smooth collaboration and effective pair testing. See Test logistics for more detials
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
