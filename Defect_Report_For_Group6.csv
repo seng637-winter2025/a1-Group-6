@@ -1,0 +1,307 @@
+﻿Issue Type,Labels,Labels,Labels,Custom field (Version),Custom field (Version),Summary,Description,Custom field (Steps to Reproduce),Reporter,Reporter Id,Priority,Status,Resolution,Created,Updated
+Bug,withdraw,,,V1.0,,ATM withdraws incorrect amounts different from what the user entered,"The system does not correctly process withdrawal amounts, leading to incorrect deductions from user accounts. The issue occurs across different account types and withdrawal values. Observed cases include:
+
+* The app withdraws *$20* when the user enters *$200*
+* The app withdraws *$100* when the user enters *$200*
+* The app withdraws *$60* when the user enters *$100*
+* The app withdraws *$60* when the user selects *$40*
+* The app withdraws *$40* when the user selects *$20*
+
+*Expected Outcome:*
+The system should withdraw the exact amount specified by the user.
+
+*Actual Outcome:*
+The system withdraws a different amount than what was entered, leading to incorrect deductions.
+
+*Fixed in version 1.1*","Initial state: The system is dispensing the withdrawal amount
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type Withdrawal
+* Select the account to withdraw from (chequing/savings/money market).
+* Select an amount to withdraw by choosing from option 1,2,3,4 and 5",Vitalis Ibuchukwu Ayogu,712020:762e9ee8-fefe-4aae-bcce-cb9cdfd58803,Highest,Done,Done,03/Feb/25 10:12 PM,03/Feb/25 10:20 PM
+Bug,Deposit,,,V1.1,,Deposit amount is reduced by $0.10 from the entered value.,"When a user deposits money, the system deducts *$0.10* from the entered deposit amount. For example, if a user deposits *$100*, the account balance reflects only *$99.90*, instead of the full deposited amount.
+
+*Expected Outcome:*
+The full deposit amount entered by the user should be credited to their account (e.g., depositing *$100* should increase the balance by *$100*).
+
+*Actual Outcome:*
+The system deducts *$0.10*, showing a balance increase of *$99.90* instead of *$100*.","Initial state: The system is requesting that the customer insert an envelope
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select deposit
+* Select account to deposit(checking/saving/money market)
+* Enter amount to deposit e.g. $100 and click enter
+* Click on the insert envelope button",Daniel Ikponmwen,712020:1afd8e89-a3a7-43a2-9c7a-1243513ff5a2,High,To Do,,03/Feb/25 9:27 PM,03/Feb/25 10:26 PM
+Bug,transfer,withdraw,,V1.1,,"Missing dollar sign ($) for ""$60"" on the Select Amount screen.","On the *Select Amount* screen, the withdrawal/transfer options display amounts inconsistently. While most amounts include a *dollar sign ($)*, the *$60 option is missing it*, appearing as *""60""* instead of *""$60""*.
+
+*Expected Outcome:*
+All amounts should consistently display with a dollar sign (e.g., *""$60""*).
+
+*Actual Outcome:*
+The *$60 option* appears without the dollar sign, leading to an inconsistent display format.","Initial state: System is displaying menu of dollar amounts
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to withdraw from (chequing/savings/money market).",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,Low,In Progress,,03/Feb/25 9:13 PM,03/Feb/25 10:28 PM
+Bug,cancel,,,V1.0,,"Typo in prompt after cancellation: ""Wood"" instead of ""Would.""","After a user cancels a transaction, the system displays a prompt with a typo:
+_""Wood you like to do another transaction""_ instead of _""Would you like to do another transaction.""_
+
+*Expected Outcome:*
+The prompt should correctly read: _""Would you like to do another transaction?""_
+
+*Actual Outcome:*
+The prompt incorrectly displays _""Wood you like to do another transaction?""_ containing a spelling mistake in ""Would.""
+
+Fixed in Version 1.1","Initial state: The system is displaying a menu of dollar amounts
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to withdraw from (chequing/savings/money market).
+* Cancel the transaction by selecting 'cancel'",Vitalis Ibuchukwu Ayogu,712020:762e9ee8-fefe-4aae-bcce-cb9cdfd58803,Low,Done,Done,03/Feb/25 9:09 PM,03/Feb/25 10:38 PM
+Bug,Incorrect-PIN,,,V1.0,,ATM screen freezes when a non-existent card is entered.,"When a user enters a card number that is not registered in the system (e.g., Card 3) along with any PIN, the screen becomes unresponsive. The user is unable to cancel, retry, or log out, effectively getting stuck in the ATM interface.
+
+*Expected Outcome:*
+The system should display an error message indicating that the card is invalid and allow the user to retry or exit.
+
+*Actual Outcome:*
+The screen freezes, preventing the user from taking any further action.
+
+*Fixed in version 1.1*","Initial state: The system is asking for entry of PIN
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter a non-existent card number e.g. 3, 4 any number
+* Enter a random PIN e.g. 45, 678",Daniel Ikponmwen,712020:1afd8e89-a3a7-43a2-9c7a-1243513ff5a2,High,Done,Done,03/Feb/25 8:55 PM,03/Feb/25 10:42 PM
+Bug,withdraw,,,V1.0,,ATM screen freezes after an insufficient balance error during withdrawal,"When a user attempts to withdraw an amount greater than their account balance, the system correctly displays an ""Insufficient Funds"" error. However, after this error appears, the screen becomes unresponsive, preventing the user from taking any further actions.
+
+*Expected Outcome:*
+After displaying the ""Insufficient Funds"" error, the system should allow the user to enter a new amount or cancel the transaction.
+
+*Actual Outcome:*
+The screen freezes, leaving the user unable to proceed or exit the transaction.
+
+*Fixed in Version 1.1*","Initial state: System is displaying menu of dollar amounts
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to withdraw from (chequing/savings/money market).
+* Select an amount greater than the balance ",Vitalis Ibuchukwu Ayogu,712020:762e9ee8-fefe-4aae-bcce-cb9cdfd58803,Medium,Done,Done,03/Feb/25 8:22 PM,03/Feb/25 10:46 PM
+Bug,Incorrect-PIN,,,V1.0,V1.1,System requires re-entry of PIN after first incorrect attempt,"The system incorrectly requires an extra PIN entry after a failed attempt, even when the second attempt is correct.
+
+*Bug Description:*
+When a user enters an incorrect PIN on the first attempt and then enters a valid PIN on the second attempt, the system does not accept the correct PIN immediately. Instead, it prompts the user to enter the PIN again, causing unnecessary re-entry.
+
+*Expected Outcome:*
+The system should accept the correct PIN on the second attempt without requiring an additional entry.
+
+*Actual Outcome:*
+The system incorrectly prompts the user to enter the PIN again, even after a valid second attempt.
+
+*Persist on version 1.1*","Initial state: Request to re-enter PIN is being displayed
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter a wrong PIN the first time e.g. 42
+* Enter the right PIN on the second try",Daniel Ikponmwen,712020:1afd8e89-a3a7-43a2-9c7a-1243513ff5a2,Medium,In Progress,,03/Feb/25 6:18 PM,03/Feb/25 10:51 PM
+Bug,balance-inquiry,,,V1.0,V1.1,Selecting Incorrect Account Types Causes Errors and Unexpected Transactions,"Selecting an incorrectly displayed account type causes errors, unintended deposits, and incorrect balance displays.
+
+*Description:*
+
+* For *Card 1*, selecting the incorrectly displayed ""Money Market"" account throws an unknown error, deposits *$500*, and displays the balance for the *Savings* account.
+* For *Card 2*, selecting the correctly displayed ""Money Market"" account throws an *invalid account type* error.
+
+*Expected Outcome:*
+Users should only be able to select and view balances for the accounts they own.
+
+*Actual Outcome:*
+Selecting an incorrect account type results in errors, unintended deposits, and incorrect balance displays.
+
+Persist in Version1.1","Initial state: Menu of transaction types is being displayed
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type Balance Inquiry
+* Select the account to inquire about for card 1, select Money Market",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,High,In Progress,,03/Feb/25 5:58 PM,03/Feb/25 9:55 PM
+Bug,balance-inquiry,,,V1.0,V1.1,Incorrect Account Types Displayed in Balance Inquiry,"The Balance Inquiry screen incorrectly displays default account types (""Checkin"" and ""Money Market"") for all users, even if they do not own these accounts.
+
+* Users see a default set of account types instead of only their actual accounts.
+* For *Card 1* (which has ""Checkin"" and ""Savings""), ""Money Market"" is incorrectly shown.
+* For *Card 2* (which has ""Checkin"" and ""Money Market""), the correct accounts are displayed.
+
+*Expected Outcome:*
+Users should only see the account types they actually own.
+
+*Actual Outcome:*
+Users see incorrect account types on the Balance Inquiry screen, leading to confusion and potential errors.
+
+*Persist on Version1.1*","Initial state: Menu of transaction types is being displayed
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type Balance Inquiry
+* Select the account to inquire about ",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,High,In Progress,,03/Feb/25 5:55 PM,03/Feb/25 11:30 PM
+Bug,account-display,login,,V1.0,,The app incorrectly deducts $0.50 from every transfer and reflects it on the receipt.,"Whenever a user makes a transfer, the app deducts an additional $0.50 from the transaction amount and displays this deduction on the receipt.
+
+*Expected Outcome:*
+The app should transfer the exact amount specified by the user, and the receipt should accurately reflect the transferred amount.
+
+*Actual Outcome:*
+The app deducts an extra $0.50 from the transfer amount and displays this deduction on the receipt.
+
+*Fixed in Version1.1*","Initial state: The system ask the amount to tranfer to
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to transfer from (chequing/savings/money market).
+* Select the account to transfer to (chequing/savings/money market).
+* Enter an amount, press enter",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,Highest,Done,Done,03/Feb/25 5:20 PM,03/Feb/25 11:47 PM
+Bug,Deposit,,,V1.0,,The app can not deposit less than $10 instead money withdraw from account,"The system withdraw money instead of depositing it if the amount is less than $10. For *examples:* depositing $6 results in a $4 withdrawal, depositing $9 results in a $1 withdrawal.
+
+*Expected Outcome:*
+The deposited amount should be correctly added to the account balance.
+
+*Actual Outcome:*
+The system incorrectly withdraws the amount instead of depositing to the account.
+
+*Persists in Version 1.1 in a different way*","Initial state: The system asks user to enter the amount to deposit
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select deposit
+* Select account to deposit(checking/saving/money market)
+* Enter amount to deposit e.g. $20 and click enter
+* Click on the insert envelope button",Laxmi Paudel,712020:1c50927e-38ca-44ff-88b0-994fddec3f3d,Highest,In Progress,,03/Feb/25 4:27 PM,03/Feb/25 11:44 PM
+Bug,Deposit,,,V1.0,,Deposit amount is reduced by $10 from the entered value.,"When a user deposits money, the system deducts *$10* from the entered deposit amount. For example, if a user deposits *$100*, the account balance reflects only *$90.00*, instead of the full deposited amount.
+
+*Expected Outcome:*
+The full deposit amount entered by the user should be credited to their account (e.g., depositing *$100* should increase the balance by *$100*).
+
+*Actual Outcome:*
+The system deducts *$10*, showing a balance increase of *$90* instead of *$100*.
+
+*Persists in Version 1.1 in a different way*","Initial state: The system asks to enter amount to deposit
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select deposit
+* Select account to deposit(checking/saving/money market)
+* Enter amount to deposit e.g. $20 and click enter
+* Click on the insert envelope button",Laxmi Paudel,712020:1c50927e-38ca-44ff-88b0-994fddec3f3d,High,In Progress,,03/Feb/25 3:58 PM,03/Feb/25 11:22 PM
+Bug,transfer,,,V1.0,V1.1,Transfer receipts incorrectly swap 'To Account' and 'From Account' details,"When a user completes a transfer, the receipt does not correctly display the transaction details.
+
+*Expected Outcome:*
+The receipt should accurately show the *'From Account'* (source of the transfer) and the *'To Account'* (destination of the transfer).
+
+*Actual Outcome:*
+The *'To Account'* and *'From Account'* details are swapped, leading to incorrect transaction records on the receipt.
+
+Persists on Version1.1","Initial state: The system ask user to enter amount to transfer
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to transfer from (chequing/savings/money market).
+* Select the account to transfer to (chequing/savings/money market).
+* Enter an amount, press enter",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,Medium,In Progress,,03/Feb/25 3:49 PM,03/Feb/25 11:21 PM
+Bug,account-verification,login,,V1.0,, ATM incorrectly processes or attempts to read an unauthorized card.,"The ATM system documentation states that only two card inputs are hardcoded:
+
+* *Card 1* with PIN *42*
+* *Card 2* with PIN *1234*
+
+However, when a user attempts to use any other card, the system does not display an appropriate warning or block the transaction.
+
+*Expected Outcome:*
+The ATM should display an error message notifying the user that the card is unauthorized and prevent further actions.
+
+*Actual Outcome:*
+The ATM displays a blank screen, leaving the user stuck with no option to close or cancel the transaction, except by forcefully closing the application window.
+
+*Fixed in Version1.1*","Initial state: System asks to enter card number
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter a card number except 1 and 2 e.g. 3
+* Enter any PIN e.g. 145",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,High,Done,Done,03/Feb/25 3:33 PM,03/Feb/25 11:42 PM
+Bug,withdraw,,,V1.0,V1.1,Incorrect error message displayed when selecting an invalid key in the withdrawal process.,"An incorrect error message is shown when an invalid key is selected during the withdrawal process. For instance, selecting '6' results in the app displaying ""$6"" on the screen, or if '7' is entered, the app does not respond at all.
+
+*Expected Outcome:* The app should display a proper error message and provide clear instructions.
+
+*Actual Outcome:* Sometimes the screen freezes or incorrectly displays ""$20"" on the screen.
+
+*Persists on Version1.1*","Initial state: System is displaying menu of transaction types
+
+* Turn on the machine 
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to withdraw from (chequing/savings/money market). 
+* Select any number except 1,2,3,4 and 5",Oreoluwa Lana,712020:9a270712-bca5-4d75-a67b-ab0965f2c5fa,Low,In Progress,,03/Feb/25 3:07 PM,03/Feb/25 11:41 PM
+Bug,Deposit,transfer,withdraw,V1.0,V1.1,"Users see all account types on deposit/transfer account selection, even those they do not own.","Regardless of ownership, all account types are displayed to users on the select account screen for deposit/transfer transactions. For instance, a user with *Card 1*, who only has *Checking* and *Savings* accounts sees all account types. This leads to an error when attempting a transfer from an account they do not own.
+
+*Expected Outcome:*
+Users should only see account types they own in the selection list.
+
+*Actual Outcome:*
+Users see all account types, causing errors when selecting an unauthorized account.
+
+Persists in Version1.1","Initial state: System is displaying menu of transaction types
+
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select the account to withdraw from (chequing/savings/money market).
+
+ ",Laxmi Paudel,712020:1c50927e-38ca-44ff-88b0-994fddec3f3d,Medium,In Progress,,03/Feb/25 2:09 PM,03/Feb/25 11:17 PM
+Bug,reciept,,,V1.0,V1.1,Receipt modal displays the previous customer's transaction even after card ejection.,"
+When a customer completes a transaction and ejects their card, the receipt display does not reset. If a new customer inserts their card, the previous user's last transaction receipt is still visible.
+
+*Expected Outcome:*
+After a card is removed, the receipt window should be cleared before displaying new transaction details.
+
+*Actual Outcome:*
+The receipt screen retains the previous customer's transaction, creating a potential privacy issue.
+
+*Persist on version V1.1*","Initial state: User Entered correct card number and correct PIN
+
+* Turn on the machine
+* Select no of bills in the machine
+* Click Insert Card and enter the card number e.g. 1
+* Enter the PIN e.g. 42
+* Choose transaction type(Withdrawal/ Deposit/Transfer/Balance Inquiry)
+* Select cancel and make sure card is ejected
+* Insert another card e.g. card 2
+* insert pin e.g. 1234",Laxmi Paudel,712020:1c50927e-38ca-44ff-88b0-994fddec3f3d,Medium,In Progress,,03/Feb/25 2:08 PM,03/Feb/25 11:31 PM
