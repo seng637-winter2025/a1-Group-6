@@ -27,7 +27,9 @@
 
 [6. Difficulties Encountered, Challenges Overcome, and Lessons Learned](#difficulties-encountered-challenges-overcome-and-lessons-learned)
 
-[7 Comments/feedback on the lab and lab document itself](#comments-feedback-on-the-lab-and-lab-document-itself)
+[7. Comments/Feedback on the Lab and Lab Document Itself](#commentsfeedback-on-the-lab-and-lab-document-itself)
+
+
 
 # Introduction
 
